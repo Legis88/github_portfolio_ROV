@@ -37,8 +37,9 @@
     .small-note{font-size:0.9rem; color:var(--muted); margin-top:6px;}
     .contact-list{display:flex; flex-direction:column; gap:6px; margin-top:6px;}
     .contact-item{font-size:0.95rem;}
-    </style>
-    </head>
+    .github-frame{width:100%; height:220px; border-radius:10px; overflow:auto; padding:12px; background:#0b1220; color:#dbeafe; font-family:monospace; font-size:0.9rem;}
+  </style>
+</head>
 <body>
   <div class="wrap">
     <header>
@@ -51,6 +52,7 @@
 
       <div class="toplinks">
         <!-- замените href на реальные ссылки -->
+        <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="#" target="_blank" rel="noopener">Colab — итоговая работа</a>
         <a class="btn" href="mailto:email@example.com">Email</a>
       </div>
@@ -62,8 +64,8 @@
         <article class="card">
           <section>
             <h2>Обо мне</h2>
-            <p>Аналитик данных, завершил программу профессиональной переподготовки <strong>«Аналитик данных: Python и SQL в BigData»</strong>. Практический опыт: сбор и очистка данных, EDA, визуализация, построение моделей машинного обучения для прикладных задач.</p>
-            <p class="meta">Ищу позицию Junior Data Analyst. Готов решать задачи по анализу данных, строить отчёты и взаимодействовать с бизнес-заказчиками.</p>
+            <p>Начинающий аналитик данных, завершил(-а) программу профессиональной переподготовки <strong>«Аналитик данных: Python и SQL в BigData»</strong>. Практический опыт: сбор и очистка данных, EDA, визуализация, построение моделей машинного обучения для прикладных задач.</p>
+            <p class="meta">Ищу позицию Junior Data Analyst или стажировку. Готов(а) решать задачи по анализу данных, строить отчёты и взаимодействовать с бизнес-заказчиками.</p>
           </section>
 
           <section>
@@ -140,9 +142,11 @@
           <section>
             <h2>Контакты</h2>
             <div class="contact-list">
-              <div class="contact-item"><strong>Телефон:</strong> +7 (903) 708-75-66</div>
-              <div class="contact-item"><strong>Email:</strong> <a href="mailto:o.rudchenko@bk.ru">o.rudchenko@bk.ru</a></div>
+              <div class="contact-item"><strong>Телефон:</strong> +7 (___) ___-__-__</div>
+              <div class="contact-item"><strong>Email:</strong> <a href="mailto:email@example.com">email@example.com</a></div>
+              <div class="contact-item"><strong>GitHub:</strong> <a href="#" target="_blank">github.com/yourname</a></div>
               <div class="contact-item"><strong>Colab:</strong> <a href="#" target="_blank">Итоговая работа (Colab)</a></div>
+              <div class="contact-item"><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourname</a></div>
             </div>
           </section>
 
@@ -158,30 +162,31 @@
 
           <section style="margin-top:12px;">
             <h2>Короткая демонстрация кода</h2>
-            
+            <div class="github-frame">
 <pre>
-# Обучение моделей
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-# Линейная регрессия - простая, интерпретируемая модель.
-lr = LinearRegression()
-lr.fit(X_train, y_train)
-y_pred_lr = lr.predict(X_test)
-# Случайный лес — нелинейная модель, способная учитывать сложные взаимосвязи между признаками.
-rf = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
-rf.fit(X_train, y_train)
-y_pred_rf = rf.predict(X_test)
+# Пример: чтение и быстрый EDA (Python)
+import pandas as pd
+df = pd.read_csv('data.csv')
+df.info()
+df.describe()
 </pre>
             </div>
-            <p class="small-note">Фрагмент кода из Прогнозирования стоимости квартиры.</p>
+            <p class="small-note">Вставьте сюда реальные выдержки из ноутбука (код/фрагменты результатов).</p>
           </section>
         </div>
       </aside>
     </main>
 
     <footer>
-      <p>                                                                                             </p>
+      <p>Готов дополнить портфолио деталями из вашей итоговой работы (метрики, визуализации, ссылки). Удачи в поиске работы!</p>
       <p style="margin-top:8px;">© <span id="year"></span> Рудченко Олег Владимирович — Аналитик данных</p>
     </footer>
   </div>
 
-
+  <script>
+    // вставьте своё ФИО
+    document.querySelectorAll('.avatar, h1')[0].textContent = 'Рудченко Олег Владимирович — Аналитик данных (Junior)';
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
