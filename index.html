@@ -142,12 +142,10 @@
           <section>
             <h2>Контакты</h2>
             <div class="contact-list">
-              <div class="contact-item"><strong>Телефон:</strong> +7 (___) ___-__-__</div>
-              <div class="contact-item"><strong>Email:</strong> <a href="mailto:email@example.com">email@example.com</a></div>
-              <div class="contact-item"><strong>GitHub:</strong> <a href="#" target="_blank">github.com/yourname</a></div>
+              <div class="contact-item"><strong>Телефон:</strong> +7 (903) 708-75-66</div>
+              <div class="contact-item"><strong>Email:</strong> <a href="mailto:o.rudchenko@bk.ru"o.rudchenko@bk.ru</a></div>
               <div class="contact-item"><strong>Colab:</strong> <a href="#" target="_blank">Итоговая работа (Colab)</a></div>
-              <div class="contact-item"><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourname</a></div>
-            </div>
+              </div>
           </section>
 
           <section style="margin-top:12px;">
@@ -164,11 +162,16 @@
             <h2>Короткая демонстрация кода</h2>
             <div class="github-frame">
 <pre>
-# Пример: чтение и быстрый EDA (Python)
-import pandas as pd
-df = pd.read_csv('data.csv')
-df.info()
-df.describe()
+# Обучение моделей
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Линейная регрессия - простая, интерпретируемая модель.
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+y_pred_lr = lr.predict(X_test)
+# Случайный лес — нелинейная модель, способная учитывать сложные взаимосвязи между признаками.
+rf = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
+rf.fit(X_train, y_train)
+y_pred_rf = rf.predict(X_test)
 </pre>
             </div>
             <p class="small-note">Вставьте сюда реальные выдержки из ноутбука (код/фрагменты результатов).</p>
